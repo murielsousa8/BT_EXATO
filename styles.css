@@ -1,1 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
 
+body {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.button-card {
+  background: #252525;
+  border-radius: 16px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333;
+}
+
+.button-label {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ddd;
+}
+
+/* Moldura e Mecânica do Botão NA */
+.na-bezel {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(145deg, #3a3a3a, #1f1f1f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6), inset 0 2px 3px rgba(255,255,255,0.2);
+}
+
+.na-button {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  
+  /* Estado Normal (Desligado / NA = Vermelho) */
+  background: radial-gradient(circle at 35% 35%, #ff5252, #b71c1c);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5), inset 0 3px 5px rgba(255, 255, 255, 0.4);
+  transform: translateY(0);
+  transition: all 0.08s ease;
+}
+
+.na-button img {
+  width: 38px;
+  height: 38px;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)) invert(1);
+}
+
+/* Estado Pressionado (Ligado = Verde) */
+.na-button.pressed {
+  background: radial-gradient(circle at 50% 50%, #69f0ae, #00c853);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 200, 83, 0.6), inset 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(4px);
+}
+
+/* Notificação flutuante */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.toast.show {
+  opacity: 1;
+}
