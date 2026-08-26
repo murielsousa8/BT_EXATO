@@ -5,7 +5,7 @@
 const BUTTONS_CONFIG = [
   {
     id: "btn-1",
-    name: "Dispositivo 149",
+    name: "Nova Pharma",
     // Imagem/ícone SVG em Base64 ou URL de imagem
     icon: "https://cdn-icons-png.flaticon.com/512/565/565547.png",
     url: "https://app.benuvem.com.br/device-io/149/receive-event",
