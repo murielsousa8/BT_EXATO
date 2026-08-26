@@ -36,7 +36,7 @@ const BUTTONS_CONFIG = [
   {
     id: "btn-unipora",
     name: "Quadra UnIpora",
-    svg: ICONS.building,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/403/receive-event"
   },
   {
