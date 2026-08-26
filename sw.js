@@ -1,4 +1,4 @@
-const CACHE_NAME = 'painel-na-v1';
+const CACHE_NAME = 'painel-na-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -26,9 +26,8 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // Ignora requisições de API externas do cache
   if (event.request.url.includes('benuvem.com.br')) {
-    return;
+    return; // Não cacheia chamadas de API
   }
   event.respondWith(
     caches.match(event.request).then(response => response || fetch(event.request))
