@@ -2,31 +2,34 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="theme-color" content="#121212" />
-  <title>Painel de Comandos NA</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Painel de Controle NA</title>
   
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="apple-touch-icon" href="icon-192.png" />
 </head>
 <body>
   <header>
-    <h1>Painel de Controle NA</h1>
-    <p>Pressione e segure para disparar o comando</p>
+    <div class="header-badge">HMI • CONTROLE REMOTO</div>
+    <h1>Painel de Dispositivos</h1>
+    <p>Pressione e segure o botão NA para acionar</p>
   </header>
 
   <main id="button-grid" class="button-grid">
-    </main>
+    <!-- Renderizado dinamicamente pelo app.js -->
+  </main>
 
-  <div id="status-toast" class="toast">Comando enviado!</div>
+  <div id="status-toast" class="toast">Comando disparado!</div>
 
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
-          .then(() => console.log('Service Worker Registrado!'))
+          .then(() => console.log('PWA Service Worker Ativo!'))
           .catch(err => console.error('Erro no SW:', err));
       });
     }
