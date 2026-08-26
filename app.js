@@ -17,68 +17,68 @@ const ICONS = {
 const BUTTONS_CONFIG = [
   {
     id: "btn-forbes",
-    name: "Forbes",
+    name: "Quadra Forbes",
     svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/151/receive-event"
   },
   {
     id: "btn-line",
-    name: "Line",
-    svg: ICONS.signal,
+    name: "Quadra Line",
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/404/receive-event"
   },
   {
     id: "btn-novapharma",
-    name: "Nova Pharma",
-    svg: ICONS.pharma,
+    name: "Quadra Nova Pharma",
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/149/receive-event"
   },
   {
     id: "btn-unipora",
-    name: "UnIpora",
+    name: "Quadra UnIpora",
     svg: ICONS.building,
     url: "https://app.benuvem.com.br/device-io/403/receive-event"
   },
   {
     id: "btn-exato01",
     name: "Exato 01",
-    svg: ICONS.target,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/261/receive-event"
   },
   {
     id: "btn-exato02",
     name: "Exato 02",
-    svg: ICONS.target,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/262/receive-event"
   },
   {
     id: "btn-exato03",
     name: "Exato 03",
-    svg: ICONS.target,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/263/receive-event"
   },
   {
     id: "btn-exato04",
     name: "Exato 04",
-    svg: ICONS.target,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/364/receive-event"
   },
   {
     id: "btn-aabb01",
     name: "AABB 01",
-    svg: ICONS.trophy,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/182/receive-event"
   },
   {
     id: "btn-aabb02",
     name: "AABB 02",
-    svg: ICONS.trophy,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/389/receive-event"
   },
   {
     id: "btn-mva-arena",
     name: "MVA Arena",
-    svg: ICONS.arena,
+    svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/238/receive-event"
   }
 ];
