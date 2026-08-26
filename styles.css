@@ -8,75 +8,84 @@
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
+  background-color: #141416;
+  color: #f5f5f7;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 24px 16px 60px 16px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+}
+
+.header-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  background: #27272a;
+  color: #a1a1aa;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  border: 1px solid #3f3f46;
 }
 
 header h1 {
   font-size: 1.4rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 header p {
-  font-size: 0.85rem;
-  color: #888;
-  margin-top: 5px;
+  font-size: 0.82rem;
+  color: #71717a;
+  margin-top: 4px;
 }
 
+/* Grid Responsivo para 2 ou 3 colunas no celular */
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  gap: 16px;
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .button-card {
-  background: #252525;
-  border-radius: 16px;
-  padding: 20px 10px;
+  background: #1e1e24;
+  border-radius: 18px;
+  padding: 16px 8px 12px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  border: 1px solid #333;
-}
-
-.button-label {
-  margin-top: 15px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #ddd;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  border: 1px solid #2a2b36;
+  transition: transform 0.1s ease;
 }
 
 /* Moldura e Mecânica do Botão NA */
 .na-bezel {
-  width: 110px;
-  height: 110px;
-  background: linear-gradient(145deg, #3a3a3a, #1f1f1f);
+  width: 82px;
+  height: 82px;
+  background: linear-gradient(145deg, #2b2d35, #15161a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.6), inset 0 2px 3px rgba(255,255,255,0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.7), inset 0 2px 2px rgba(255,255,255,0.15);
+  border: 2px solid #323540;
 }
 
 .na-button {
-  width: 85px;
-  height: 85px;
+  width: 66px;
+  height: 66px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -87,41 +96,61 @@ header p {
   touch-action: manipulation;
   
   /* Estado Normal (Desligado / NA = Vermelho) */
-  background: radial-gradient(circle at 35% 35%, #ff5252, #b71c1c);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5), inset 0 3px 5px rgba(255, 255, 255, 0.4);
+  background: radial-gradient(circle at 35% 35%, #ff4d4d, #b31212);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6), inset 0 3px 4px rgba(255, 255, 255, 0.35);
   transform: translateY(0);
-  transition: all 0.08s ease;
+  transition: all 0.06s ease;
 }
 
-.na-button img {
-  width: 38px;
-  height: 38px;
+.na-button svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
   pointer-events: none;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)) invert(1);
 }
 
 /* Estado Pressionado (Ligado = Verde) */
 .na-button.pressed {
-  background: radial-gradient(circle at 50% 50%, #69f0ae, #00c853);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 200, 83, 0.6), inset 0 4px 8px rgba(0, 0, 0, 0.4);
-  transform: translateY(4px);
+  background: radial-gradient(circle at 50% 50%, #4ade80, #15803d);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 22px rgba(74, 222, 128, 0.75), inset 0 4px 6px rgba(0, 0, 0, 0.5);
+  transform: translateY(3px);
 }
 
-/* Notificação flutuante */
+.button-label {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #e4e4e7;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+/* Notificação Toast */
 .toast {
   position: fixed;
-  bottom: 20px;
-  background: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-size: 0.85rem;
+  bottom: 24px;
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  color: #4ade80;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.82rem;
   opacity: 0;
-  transition: opacity 0.3s;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
   pointer-events: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  z-index: 100;
 }
 
 .toast.show {
   opacity: 1;
+  transform: translateY(0);
 }
