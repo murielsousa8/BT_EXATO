@@ -1,36 +1,85 @@
 // ==========================================
-// CONFIGURAÇÃO DOS BOTÕES
-// Adicione quantos botões desejar aqui:
+// COLEÇÃO DE ÍCONES VETORIAIS (SVG)
+// ==========================================
+const ICONS = {
+  power: `<svg viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/></svg>`,
+  signal: `<svg viewBox="0 0 24 24"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 20V4"/></svg>`,
+  pharma: `<svg viewBox="0 0 24 24"><path d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>`,
+  building: `<svg viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>`,
+  target: `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`,
+  trophy: `<svg viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1h10v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34c3.08-.63 5.43-3.23 5.9-6.66H4.1c.47 3.43 2.82 6.03 5.9 6.66Z"/></svg>`,
+  arena: `<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10v4a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6v-4a10 10 0 0 0-10-10ZM2 12h20M12 2v20"/></svg>`
+};
+
+// ==========================================
+// CONFIGURAÇÃO DOS 11 BOTÕES REAIS
 // ==========================================
 const BUTTONS_CONFIG = [
   {
-    id: "btn-1",
-    name: "Nova Pharma",
-    // Imagem/ícone SVG em Base64 ou URL de imagem
-    icon: "https://cdn-icons-png.flaticon.com/512/565/565547.png",
-    url: "https://app.benuvem.com.br/device-io/149/receive-event",
-    method: "GET" // ou POST
-  },
-  {
-    id: "btn-2",
-    name: "UnIpora",
-    icon: "https://cdn-icons-png.flaticon.com/512/888/888879.png",
-    url: "https://app.benuvem.com.br/device-io/403/receive-event",
-    method: "GET"
-  },
-  {
-    id: "btn-3",
-    name: "Lince",
-    icon: "https://cdn-icons-png.flaticon.com/512/3524/3524659.png",
-    url: "https://app.benuvem.com.br/device-io/404/receive-event",
-    method: "GET"
-  },
-   {
-    id: "btn-4",
+    id: "btn-forbes",
     name: "Forbes",
-    icon: "https://cdn-icons-png.flaticon.com/512/3524/3524659.png",
-    url: "https://app.benuvem.com.br/device-io/151/receive-event",
-    method: "GET"
+    svg: ICONS.power,
+    url: "https://app.benuvem.com.br/device-io/151/receive-event"
+  },
+  {
+    id: "btn-line",
+    name: "Line",
+    svg: ICONS.signal,
+    url: "https://app.benuvem.com.br/device-io/404/receive-event"
+  },
+  {
+    id: "btn-novapharma",
+    name: "Nova Pharma",
+    svg: ICONS.pharma,
+    url: "https://app.benuvem.com.br/device-io/149/receive-event"
+  },
+  {
+    id: "btn-unipora",
+    name: "UnIpora",
+    svg: ICONS.building,
+    url: "https://app.benuvem.com.br/device-io/403/receive-event"
+  },
+  {
+    id: "btn-exato01",
+    name: "Exato 01",
+    svg: ICONS.target,
+    url: "https://app.benuvem.com.br/device-io/261/receive-event"
+  },
+  {
+    id: "btn-exato02",
+    name: "Exato 02",
+    svg: ICONS.target,
+    url: "https://app.benuvem.com.br/device-io/262/receive-event"
+  },
+  {
+    id: "btn-exato03",
+    name: "Exato 03",
+    svg: ICONS.target,
+    url: "https://app.benuvem.com.br/device-io/263/receive-event"
+  },
+  {
+    id: "btn-exato04",
+    name: "Exato 04",
+    svg: ICONS.target,
+    url: "https://app.benuvem.com.br/device-io/364/receive-event"
+  },
+  {
+    id: "btn-aabb01",
+    name: "AABB 01",
+    svg: ICONS.trophy,
+    url: "https://app.benuvem.com.br/device-io/182/receive-event"
+  },
+  {
+    id: "btn-aabb02",
+    name: "AABB 02",
+    svg: ICONS.trophy,
+    url: "https://app.benuvem.com.br/device-io/389/receive-event"
+  },
+  {
+    id: "btn-mva-arena",
+    name: "MVA Arena",
+    svg: ICONS.arena,
+    url: "https://app.benuvem.com.br/device-io/238/receive-event"
   }
 ];
 
@@ -39,20 +88,22 @@ const BUTTONS_CONFIG = [
 // ==========================================
 const grid = document.getElementById("button-grid");
 const toast = document.getElementById("status-toast");
+let toastTimeout;
 
 function showToast(msg) {
+  clearTimeout(toastTimeout);
   toast.textContent = msg;
   toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 1500);
+  toastTimeout = setTimeout(() => toast.classList.remove("show"), 1600);
 }
 
 function sendCommand(buttonConfig) {
-  // Vibração tátil no celular se suportado
-  if (navigator.vibrate) navigator.vibrate(40);
+  if (navigator.vibrate) {
+    navigator.vibrate(50); // Feedback tátil ao tocar
+  }
 
-  // Envio do evento em segundo plano (mode no-cors evita bloqueios se o servidor de IoT não tiver headers CORS abertos)
   fetch(buttonConfig.url, {
-    method: buttonConfig.method,
+    method: "GET",
     mode: "no-cors"
   })
   .then(() => showToast(`Enviado: ${buttonConfig.name}`))
@@ -75,12 +126,8 @@ function renderButtons() {
     const btn = document.createElement("button");
     btn.className = "na-button";
     btn.setAttribute("aria-label", cfg.name);
+    btn.innerHTML = cfg.svg;
 
-    const img = document.createElement("img");
-    img.src = cfg.icon;
-    img.alt = cfg.name;
-
-    btn.appendChild(img);
     bezel.appendChild(btn);
 
     const label = document.createElement("span");
@@ -91,7 +138,7 @@ function renderButtons() {
     card.appendChild(label);
     grid.appendChild(card);
 
-    // Eventos de Pressionar (Pointer Events cobrem Mouse e Touch)
+    // Eventos de Pressionar
     const press = (e) => {
       e.preventDefault();
       if (!btn.classList.contains("pressed")) {
@@ -110,6 +157,7 @@ function renderButtons() {
     btn.addEventListener("pointerup", release);
     btn.addEventListener("pointercancel", release);
     btn.addEventListener("pointerleave", release);
+    btn.addEventListener("contextmenu", e => e.preventDefault());
   });
 }
 
