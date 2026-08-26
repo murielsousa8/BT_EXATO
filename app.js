@@ -13,14 +13,21 @@ const BUTTONS_CONFIG = [
   },
   {
     id: "btn-2",
-    name: "Portão Garagem",
+    name: "UnIpora",
     icon: "https://cdn-icons-png.flaticon.com/512/888/888879.png",
-    url: "https://app.benuvem.com.br/device-io/150/receive-event",
+    url: "https://app.benuvem.com.br/device-io/403/receive-event",
     method: "GET"
   },
   {
     id: "btn-3",
-    name: "Alarme Geral",
+    name: "Lince",
+    icon: "https://cdn-icons-png.flaticon.com/512/3524/3524659.png",
+    url: "https://app.benuvem.com.br/device-io/404/receive-event",
+    method: "GET"
+  },
+   {
+    id: "btn-4",
+    name: "Forbes",
     icon: "https://cdn-icons-png.flaticon.com/512/3524/3524659.png",
     url: "https://app.benuvem.com.br/device-io/151/receive-event",
     method: "GET"
