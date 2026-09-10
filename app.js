@@ -12,33 +12,9 @@ const ICONS = {
 };
 
 // ==========================================
-// CONFIGURAÇÃO DOS 11 BOTÕES REAIS
+// CONFIGURAÇÃO DOS BOTÕES (SOMENTE EXATO)
 // ==========================================
 const BUTTONS_CONFIG = [
-  {
-    id: "btn-forbes",
-    name: "Quadra Forbes",
-    svg: ICONS.power,
-    url: "https://app.benuvem.com.br/device-io/151/receive-event"
-  },
-  {
-    id: "btn-line",
-    name: "Quadra Line",
-    svg: ICONS.power,
-    url: "https://app.benuvem.com.br/device-io/404/receive-event"
-  },
-  {
-    id: "btn-novapharma",
-    name: "Quadra Nova Pharma",
-    svg: ICONS.power,
-    url: "https://app.benuvem.com.br/device-io/149/receive-event"
-  },
-  {
-    id: "btn-unipora",
-    name: "Quadra UnIpora",
-    svg: ICONS.power,
-    url: "https://app.benuvem.com.br/device-io/403/receive-event"
-  },
   {
     id: "btn-exato01",
     name: "Exato 01",
@@ -62,24 +38,6 @@ const BUTTONS_CONFIG = [
     name: "Exato 04",
     svg: ICONS.power,
     url: "https://app.benuvem.com.br/device-io/364/receive-event"
-  },
-  {
-    id: "btn-aabb01",
-    name: "AABB 01",
-    svg: ICONS.power,
-    url: "https://app.benuvem.com.br/device-io/182/receive-event"
-  },
-  {
-    id: "btn-aabb02",
-    name: "AABB 02",
-    svg: ICONS.power,
-    url: "https://app.benuvem.com.br/device-io/389/receive-event"
-  },
-  {
-    id: "btn-mva-arena",
-    name: "MVA Arena",
-    svg: ICONS.power,
-    url: "https://app.benuvem.com.br/device-io/238/receive-event"
   }
 ];
 
