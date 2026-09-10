@@ -48,13 +48,13 @@ header p {
   margin-top: 4px;
 }
 
-/* Grid Responsivo para 2 ou 3 colunas no celular */
+/* Grid Ajustado para 4 botões (2 colunas perfeitamente centralizadas) */
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   width: 100%;
-  max-width: 650px;
+  max-width: 320px; /* Limita a largura para formar um quadrado 2x2 */
 }
 
 .button-card {
